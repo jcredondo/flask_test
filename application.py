@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 application = Flask(__name__)
 
 
 @application.route('/')
 def hello_world():
-    return '<h1>AWS Python! test</h1>'
+    return render_template('index.html')
